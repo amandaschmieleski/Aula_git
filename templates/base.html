@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{% static 'global/style.css' %}">
+        {% block extra_css %}{% endblock %}
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="{% url 'index_home' %}">Home</a></li>
+                <li><a href="{% url 'info_internacional' %}">Internacional</a></li>
+                <li><a href="{% url 'info_seguro_carros' %}">Seguro de Carros</a></li>
+            </ul>
+            <img src="{% static 'global/imagens/senac.jpg' %}">
+        </nav>
+
+        <div class="conteudo">
+            {% block conteudo %}{% endblock %}
+        </div>
+
+        {% block extra_js %}{% endblock %}
+        
+    </body>
+
+</html>

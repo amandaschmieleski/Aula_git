@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Seguro de Carros{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'seguro_carros/style.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<h1>Bem-vindo ao aplicativo sobre seguro de carros!</h1>
+
+<img class="tamanho-imagem" src="{% static 'seguro_carros/imagens/seguro.jpg' %}">
+
+<p>A seguir, informações e o nome dos segurados:</p>
+
+<p>{{ paragrafo }}</p>
+
+<ul>
+    {% for segurado in segurados %}
+        <li>{{ segurado }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

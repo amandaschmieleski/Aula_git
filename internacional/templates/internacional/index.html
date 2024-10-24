@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Internacional{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'internacional/style.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<h1>Bem-vindo ao aplicativo sobre o melhor time de futebol do país!</h1>
+
+<img class="tamanho-imagem" src="{% static 'internacional/imagens/internacional.svg' %}">
+
+<p>A seguir, informações e os nomes dos jogadores:</p>
+
+<p>{{ paragrafo }}</p>
+
+<ul>
+    {% for jogador in jogadores %}
+        <li>{{ jogador }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

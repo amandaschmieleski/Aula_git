@@ -1,0 +1,35 @@
+nav {
+    background-color: #208b67;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 1rem 0rem;
+}
+
+nav ul li {
+    padding: 0rem 1rem;
+}
+
+nav a {
+    color: rgb(235, 233, 235);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav img {
+    padding: 0rem 0rem 1rem 0rem;
+}
+
+.conteudo {
+    margin: 2rem;
+}
+
+.tamanho-imagem {
+    width: 150px;
+    height: 150px;
+}
